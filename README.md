@@ -1,2 +1,2 @@
-# docker-jenkins-slave-npm
-Docker Jenkins slave for NPM projects
+# docker-jenkins-slave-nodejs
+Docker Jenkins slave for NodeJS projects
