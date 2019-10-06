@@ -11,23 +11,18 @@ RUN apt-get update && \
     mkdir -p /var/run/sshd && \
 # Install JDK 8 (latest stable edition at 2019-04-01)
     apt-get install -qy openjdk-8-jdk && \
-# Install maven
-    apt-get install -qy maven && \
+# Install NodeJS
+    apt-get install -qy nodejs && \
+# Install NPM
+    apt-get install -qy npm && \
 # Cleanup old packages
     apt-get -qy autoremove && \
 # Add user jenkins to the image
     adduser --quiet jenkins && \
 # Set password for the jenkins user (you may want to alter this).
-    echo "jenkins:jenkins" | chpasswd && \
-    mkdir /home/jenkins/.m2 && \
-    mkdir /home/jenkins/.m2/repository
-
-COPY repository /home/jenkins/.m2/repository/
-# Copy authorized keys
-#COPY .ssh/authorized_keys /home/jenkins/.ssh/authorized_keys
-
-RUN chown -R jenkins:jenkins /home/jenkins/.m2/
-    #chown -R jenkins:jenkins /home/jenkins/.ssh/
+    echo "jenkins:jenkins" | chpasswd
+    
+#RUN chown -R jenkins:jenkins /home/jenkins/.m2/
 
 # Standard SSH port
 EXPOSE 22
