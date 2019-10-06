@@ -15,8 +15,9 @@ RUN apt-get update && \
     apt-get install -qy nodejs && \
 # Install NPM
     apt-get install -qy npm && \
-# Install bower
+# Install bower and glup
     npm install -g bower && \
+    npm install -g gulp && \
 # Cleanup old packages
     apt-get -qy autoremove && \
 # Add user jenkins to the image
