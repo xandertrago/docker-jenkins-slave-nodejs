@@ -18,6 +18,7 @@ RUN apt-get update && \
 # Install bower and glup
     npm install -g bower && \
     npm install -g bower-npm-resolver && \
+    npm install -g browser-sync && \
     npm install -g gulp && \
 # Cleanup old packages
     apt-get -qy autoremove && \
