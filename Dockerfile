@@ -20,6 +20,7 @@ RUN apt-get update && \
     npm install -g bower-npm-resolver && \
     npm install -g browser-sync && \
     npm install -g gulp && \
+    export NODE_OPTIONS=--max_old_space_size=4096 && \
 # Cleanup old packages
     apt-get -qy autoremove && \
 # Add user jenkins to the image
