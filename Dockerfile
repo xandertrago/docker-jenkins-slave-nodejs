@@ -14,7 +14,7 @@ RUN apt-get update && \
 # Install NodeJS
     apt-get install -qy curl && \
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
-    apt-get install -qy nodejs && \
+    apt install nodejs && \
 # Install NPM
     apt-get install -qy npm && \
 # Install bower and glup
