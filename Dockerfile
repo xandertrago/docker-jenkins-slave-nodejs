@@ -16,8 +16,8 @@ RUN apt-get update && \
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     apt-get update && \
-    apt-get install -qy nodejs && \
-    apt-get install -qy yarn && \
+    apt-get install -y nodejs && \
+    apt-get install -y yarn && \
 # Install NPM
     apt-get install -qy npm && \
 # Install bower and glup
