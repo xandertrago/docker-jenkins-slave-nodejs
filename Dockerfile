@@ -12,7 +12,7 @@ RUN apt-get update && \
 # Install JDK 8 (latest stable edition at 2019-04-01)
     apt-get install -qy openjdk-8-jdk && \
 # Install NodeJS
-    apt-get install -qy curl && \
+    apt-get install -qy curl build-essential apt-transport-https lsb-release ca-certificates && \
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     apt-get update && \
